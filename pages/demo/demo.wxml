@@ -1,0 +1,8 @@
+<view class="container">
+  <view>
+    <button id="zz" bindtap='demoClick'>按钮1</button>
+  </view>
+  <view>
+    <text>{{showName}}</text>
+  </view>
+</view>
