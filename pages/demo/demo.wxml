@@ -1,8 +1,40 @@
+<!-- demo.wxml -->
 <view class="container">
+  <!-- 引入 -->
+  <include src='../common/header.wxml' />
+  <!-- 测试绑定事件 -->
   <view>
-    <button id="zz" bindtap='demoClick'>按钮1</button>
+    <button id="zz" bindtap='demoClick' catchtap='demoClick2'>按钮1</button>
+    <button bindtap='changeColor'>变色</button>
   </view>
+  <!-- text展示内容 -->
   <view>
-    <text>{{showName}}</text>
+    <text style='color: {{color}}'>{{showName}}</text>
   </view>
+  <!-- 判断 -->
+  <view>
+    <!-- for -->
+    <block wx:for="{{zzlist}}" wx:for-item="zz" wx:for-index="idx">
+      <text style='display:block;'>{{idx}}: {{zz.name}} / {{zz.age}}</text>
+    </block>
+    <!-- if elif else -->
+    <view wx:if="{{view == 'view1'}}">view1</view>
+    <view wx:elif="{{view == 'view2'}}">view2</view>
+    <view wx:else="{{view == 'view3'}}">view3</view>
+  </view>
+  <!-- 测试运算 -->
+  <view>
+    <text id="{{san1 + san2 ==3? 'zzx': 'xx'}}">测试运算</text>
+  </view>
+  <!-- 模板 -->
+  <template name="testTemp">
+    <view>{{zz}}</view>
+  </template>
+  <!-- 运用模板 ps: "..."是用来展开一个对象 -->
+  <template is="testTemp" data="{{...temp.A}}"></template>
+  <template is="testTemp" data="{{...temp.B}}"></template>
+  <!-- 引入运用通用模板 -->
+  <import src="../common/template.wxml" />
+  <template is="demo" data="{{...temp.C}}"></template>
+  <template is="demo" data="{{...temp.D}}"></template>
 </view>

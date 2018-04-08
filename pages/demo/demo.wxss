@@ -1,0 +1,9 @@
+/** 单位：rpx iphone6屏幕宽度为750rpx=375px 1rpx=0.5px **/
+/** 单位：rpx iphone6屏幕宽度为20rem 1rem=750/20rpx **/
+
+@import "../common/common.wxss"
+
+#zz{
+  background-color: #ccc;
+  color: #fff;
+}

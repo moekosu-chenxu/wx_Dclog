@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/demo/demo",
-    "pages/index/index",
+    "pages/list/list",
+    "pages/admin/admin",
     "pages/logs/logs"
   ],
   "window":{
@@ -12,11 +12,11 @@
   },
   "tabBar":{
     "list": [{
-      "pagePath": "pages/index/index",
-      "text": "头像页"
+      "pagePath": "pages/list/list",
+      "text": "列表"
     },{
-      "pagePath": "pages/demo/demo",
-      "text": "测试页"
+      "pagePath": "pages/admin/admin",
+      "text": "后台"
     }],
     "position": "bottom",
     "backgroundColor": "#ccc",

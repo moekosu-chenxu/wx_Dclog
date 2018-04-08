@@ -1,0 +1,62 @@
+/* pages/my/my.wxss */
+@import '../common/common.wxss';
+.listBody{
+  padding: 1rem 0 1rem 2rem;
+}
+.item{
+  float: left;
+  margin: 0 calc(2rem - 2px) 1rem 0;
+}
+.itemImg{
+  border:1px solid #ccc;
+  width: 4rem;
+  height: 4rem;
+  display: block;
+}
+.itemDesc{
+  width: 4rem;
+  text-align: center;
+  color: #464646;
+}
+
+.pop{
+  width: 15rem;
+  height: 20rem;
+  position: absolute;
+  top: 5rem;
+  left: 2.5rem;
+  background-color: #fff;
+  border:1px solid #aaa;
+}
+.popClose{
+  float: right;
+}
+.popImg{
+  width: 8rem;
+  margin: 1rem auto 0;
+}
+.popImg image{
+  width: 8rem;
+  height: calc(8rem - 1px);
+  border: 1px solid #ccc;
+}
+.popName{
+  width: 13rem;
+  height: 1rem;
+  margin: .5rem auto;
+  text-align: center;
+}
+.popDesc{
+  width: 13rem;
+  height: 4rem;
+  overflow-y: auto;
+  margin: auto;
+  text-align: left;
+  word-break: break-all;
+}
+.popSubmit{
+  width: 11rem;
+  height: 2rem;
+  line-height: 2rem;
+  margin: 1rem 2rem;
+}

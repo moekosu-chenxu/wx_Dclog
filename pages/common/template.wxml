@@ -1,0 +1,4 @@
+<!-- template.wxml -->
+<template name="demo">
+  <view>{{zz}}</view>
+</template>

@@ -1,0 +1,18 @@
+<!-- list.wxml -->
+<view class="listBody">
+  <block class="list" wx:for="{{list}}" wx:for-item="item">
+    <view class='item' bindtap="scanDetail" data-callid="{{item.id}}">
+      <image class='itemImg' src='{{item.pic}}' />
+      <view class='itemDesc'>
+        <text>{{item.desc}}</text>
+      </view>
+    </view>
+  </block>
+  <view class='pop' hidden='{{showDetail}}'>
+    <view class='popClose' bindtap="closepop">✘</view>
+    <view class='popImg'><image src='{{detail.pic}}'></image></view>
+    <view class='popName'><text>{{detail.name}}  {{detail.price}}</text></view>
+    <view class='popDesc'><text>{{detail.desc}}</text></view>
+    <button class='popSubmit' bindtap="call" data-callid="{{detail.id}}">呼叫</button>
+  </view>
+</view>
