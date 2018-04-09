@@ -13,7 +13,7 @@
   height: 4rem;
   display: block;
 }
-.itemDesc{
+.itemName{
   width: 4rem;
   text-align: center;
   color: #464646;

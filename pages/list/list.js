@@ -1,60 +1,12 @@
 // pages/list/list.js
 var app = getApp();
+var currData = require('../common/data.js');
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    list: [{
-      id: '1',
-      pic: '',
-      desc: '王XX'
-    }, {
-      pic: '',
-      desc: '李XX'
-    }, {
-      pic: '',
-      desc: '陈XX'
-    }, {
-      pic: '',
-      desc: '刘XX'
-    }, {
-      pic: '',
-      desc: '李XX'
-    }, {
-      pic: '',
-      desc: '陈XX'
-    }, {
-      pic: '',
-      desc: '刘XX'
-    }, {
-      pic: '',
-      desc: '李XX'
-    }, {
-      pic: '',
-      desc: '陈XX'
-    }, {
-      pic: '',
-      desc: '刘XX'
-    }, {
-      pic: '',
-      desc: '李XX'
-    }, {
-      pic: '',
-      desc: '陈XX'
-    }, {
-      pic: '',
-      desc: '刘XX'
-    }, {
-      pic: '',
-      desc: '李XX'
-    }, {
-      pic: '',
-      desc: '陈XX'
-    }, {
-      pic: '',
-      desc: '刘XX'
-    }],
+    list: currData.getData(),
     showDetail: true,
     detail:{
       id: '',
@@ -69,14 +21,16 @@ Page({
     console.log(event);
     // 获取id
     var call_id = event.currentTarget.dataset.callid;
+    // 根据id获取对象
+    var currP = currData.getOne(call_id);
     // 赋值
     this.setData({
       detail: {
-        id: call_id,
-        pic: '',
-        name: '王XX',
-        price: '12米/90分钟',
-        desc: '测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述测试描述'
+        id: currP.id,
+        pic: currP.pic,
+        name: currP.name,
+        price: currP.price,
+        desc: currP.desc
       },
       // 弹框
       showDetail: false
@@ -104,7 +58,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    
   },
 
   /**

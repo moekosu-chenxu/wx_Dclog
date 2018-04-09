@@ -1,2 +1,23 @@
 <!--pages/admin/admin.wxml-->
-<text>pages/admin/admin.wxml</text>
+<view>
+  <view class='label'>
+    <text class='label_title'>名称：</text>
+    <input class='label_input' type='text'></input>
+  </view>
+  <view class='label'>
+    <text class='label_title'>价格：</text>
+    <input class='label_input' type='text'></input>
+  </view>
+  <view class='label'>
+    <text class='label_title'>描述：</text>
+    <textarea class='label_input area'></textarea>
+  </view>
+  <view class='label label_photo'>
+    <text class='label_title'>上传图片：</text>
+    <view class='upload'>
+      <button class='chooseImg' bindtap="chooseImg">上传</button>
+      <image class='preloadImg' src='{{imgSrc}}'></image>
+    </view>
+  </view>
+  <button class='submit' bindtap="submit">新增</button>
+</view>

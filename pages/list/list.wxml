@@ -3,8 +3,8 @@
   <block class="list" wx:for="{{list}}" wx:for-item="item">
     <view class='item' bindtap="scanDetail" data-callid="{{item.id}}">
       <image class='itemImg' src='{{item.pic}}' />
-      <view class='itemDesc'>
-        <text>{{item.desc}}</text>
+      <view class='itemName'>
+        <text>{{item.name}}</text>
       </view>
     </view>
   </block>

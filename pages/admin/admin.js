@@ -1,11 +1,46 @@
 // pages/admin/admin.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-  
+    imgSrc: ''
+  },
+  // 选择图片
+  chooseImg: function(){
+    var that_ = this;
+    wx.chooseImage({
+      success: function(res) {
+        // loading
+        wx.showLoading({
+          title: '正在上传',
+          mask: true
+        });
+        // 上传图片
+        // wx.uploadFile({
+        //   url: '/xx',
+        //   filePath: res.tempFilePaths[0],
+        //   name: 'file',
+        //   success: function(resp){
+        //     var data = resp.data;
+        //   }
+        // });
+        // 设置图片
+        var path = res.tempFilePaths;
+        console.log(path);
+        that_.setData({
+          imgSrc: path
+        });
+        // 停止loading
+        wx.hideLoading();
+      }
+    });
+  },
+  // 提交
+  submit: function(){
+    wx.showToast({
+      title: '提交成功',
+    });
   },
 
   /**
