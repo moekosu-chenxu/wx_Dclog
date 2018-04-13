@@ -17,16 +17,20 @@ Page({
           mask: true
         });
         // 上传图片
-        // wx.uploadFile({
-        //   url: '/xx',
-        //   filePath: res.tempFilePaths[0],
-        //   name: 'file',
-        //   success: function(resp){
-        //     var data = resp.data;
-        //   }
-        // });
+        wx.uploadFile({
+          url: 'http://localhost:8099/moekosu/upload',
+          filePath: res.tempFilePaths[0],
+          name: 'file',
+          success: function(resp){
+            var data = resp.data;
+            console.log(data);
+          },
+          fail: function(err){
+            console.log(err);
+          }
+        });
         // 设置图片
-        var path = res.tempFilePaths;
+        var path = res.tempFilePaths[0];
         console.log(path);
         that_.setData({
           imgSrc: path
